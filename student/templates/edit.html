@@ -1,0 +1,37 @@
+{% extends 'master.html' %}
+{% block body  %}
+
+<div class="small_div">
+
+<div class="container">
+    <br>
+    <h2> Division List </h2>
+    <hr>
+
+    <form action="/update/{{ student.id }}">
+
+        {% csrf_token %}
+
+        <label class="form-group" for="name"> Name : </label>
+        <input class="form-control" type="text" name="name" value="{{ student.name}}" placeholder="{{ student.name}}">
+
+       <label class="form-group" for="phone"> Phone : </label>
+        <input class="form-control" type="text" name="phone" value="{{ student.phone}}" placeholder="{{ student.phone}}">
+
+        <label class="form-group" for="email"> Email : </label>
+        <input class="form-control" type="text" name="email" value="{{ student.email}}" placeholder="{{ student.email}}">
+
+        <label class="form-group" for="city"> Name : </label>
+        <input class="form-control" type="text" name="city" value="{{ student.city}}" placeholder="{{ student.city}}">
+
+        <!-- <input class="btn btn-primary" type="submit" value="Update"> -->
+        <button type="submit" class="btn btn-primary"value="Update">Update</button>
+
+    </form>
+
+
+</div>
+</div>
+
+
+{% endblock %}

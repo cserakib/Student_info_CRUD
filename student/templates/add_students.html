@@ -1,0 +1,39 @@
+{% extends 'master.html' %}
+
+{% block body  %}
+<div class="small_div">
+
+<div class="container">
+    <br>
+    <h2>Student List</h2>
+    <hr>
+
+    <form action="/Create" method="GET">
+
+
+                {%  csrf_token %}
+        <label class="form-group" for="Student">Name: </label>
+        <input class="form-control" type="text" name="name"><br>
+
+        <label class="form-group" for="Student">Phone: </label>
+        <input class="form-control" type="text" name="phone"><br>
+
+        <label class="form-group" for="Student">Email: </label>
+        <input  class="form-control" type="text" name="email"><br>
+
+        <label class="form-group" for="Student">City: </label>
+        <input class="form-control" type="text" name="city"><br>
+
+
+        <!-- <input class="btn btn-success" type="submit" value="Create"> -->
+        <button type="submit" class="btn btn-primary"value="Create">Submit</button>
+
+
+        </form>
+        <br>
+
+
+</div>
+</div>
+
+{% endblock %}
